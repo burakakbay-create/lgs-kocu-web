@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LGS Koçu — 8. sınıf öğrencileri için AI destekli sınav koçu</title>
+<meta name="description" content="LGS Koçu, 8. sınıf öğrencileri için Türkçe, AI destekli premium bir sınav koçu uygulamasıdır. Soruyu fotoğrafla, adım adım çözümü al.">
+<meta property="og:title" content="LGS Koçu — Yanındaki koç.">
+<meta property="og:description" content="8. sınıf LGS sınavına AI destekli, sakin ve saygılı koçluk.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lgskocu.com">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    color: #0E1B2C;
+    background: #FAF7F2;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+  header { text-align: center; padding: 64px 0 48px; }
+  .mark { width: 96px; height: 96px; margin: 0 auto 24px; }
+  .eyebrow {
+    color: #B8894F;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+    margin-bottom: 8px;
+    color: #0E1B2C;
+  }
+  .tagline {
+    font-family: "Newsreader", Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #B8894F;
+    margin-bottom: 16px;
+  }
+  .lede {
+    font-size: 17px;
+    color: #4A5468;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .stores {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 36px 0 24px;
+  }
+  .store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #0E1B2C;
+    color: #FAF7F2;
+    padding: 14px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.12s ease;
+  }
+  .store-btn:hover { transform: translateY(-1px); }
+  .store-btn .label-small { font-size: 11px; opacity: 0.7; display: block; margin-bottom: 1px; font-weight: 400; }
+  .store-btn .label-big { font-size: 15px; }
+  .soon { color: #888; font-size: 13px; margin-top: 4px; }
+  section { padding: 32px 0; border-top: 1px solid #EDDDC4; }
+  h2 {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #0E1B2C;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .feature {
+    background: #fff;
+    border: 1px solid #EDDDC4;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .feature .icon {
+    width: 36px; height: 36px;
+    background: #F6EEDF;
+    border: 1px solid #EDDDC4;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: #B8894F;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .feature h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #0E1B2C;
+  }
+  .feature p {
+    font-size: 14px;
+    color: #4A5468;
+    line-height: 1.5;
+  }
+  footer {
+    text-align: center;
+    padding: 48px 0 32px;
+    color: #888;
+    font-size: 14px;
+    border-top: 1px solid #EDDDC4;
+  }
+  footer a {
+    color: #4A5468;
+    text-decoration: none;
+    margin: 0 12px;
+  }
+  footer a:hover { color: #0E1B2C; }
+  .copyright { margin-top: 16px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="LGS Koçu">
+      <circle cx="32" cy="32" r="29" stroke="#0E1B2C" stroke-width="1.25"/>
+      <path d="M6 32 L32 30 L58 32 L32 34 Z" fill="#0E1B2C"/>
+      <path d="M32 58 L30 32 L34 32 Z" fill="#0E1B2C"/>
+      <path d="M32 6 L34 32 L30 32 Z" fill="#D4A574"/>
+      <circle cx="32" cy="32" r="1.5" fill="#FAF7F2" stroke="#0E1B2C" stroke-width="0.5"/>
+    </svg>
+    <div class="eyebrow">LGS KOÇU</div>
+    <h1>Yanındaki koç.</h1>
+    <p class="tagline">8. sınıf öğrencileri için.</p>
+    <p class="lede">
+      Takıldığın soruyu fotoğrafla. AI sakin ve saygılı bir tonla, adım adım Türkçe çözer.
+      Zayıf konularını öğrenir, sana özel bir günlük plan sunar. Gece 11'de bile.
+    </p>
+
+    <div class="stores">
+      <a class="store-btn" href="#" aria-label="App Store'da indirilecek">
+        <span>
+          <span class="label-small">Yakında</span>
+          <span class="label-big">App Store</span>
+        </span>
+      </a>
+      <a class="store-btn" href="#" aria-label="Google Play'de indirilecek">
+        <span>
+          <span class="label-small">Yakında</span>
+          <span class="label-big">Google Play</span>
+        </span>
+      </a>
+    </div>
+    <p class="soon">7 gün ücretsiz deneme · ₺299/ay veya ₺1.999/yıl</p>
+  </header>
+
+  <section>
+    <h2>Nasıl çalışır?</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">1</div>
+        <h3>Soruyu fotoğrafla</h3>
+        <p>Defterindeki ya da kitabındaki soruyu kameranla çek.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">2</div>
+        <h3>Adım adım çözüm</h3>
+        <p>AI sorunu okur, müfredata göre etiketler ve sakin bir tonla anlatır.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">3</div>
+        <h3>Anlamadığını sor</h3>
+        <p>Bir adımda takılırsan "Açıkla" — daha basit kelimelerle yeniden anlatır.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">4</div>
+        <h3>Konu haritası</h3>
+        <p>Her soru, zayıf konu haritanı günceller. Hangi konuda iyisin, hangisinde takıldın görürsün.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">5</div>
+        <h3>Günlük plan</h3>
+        <p>Yarın ne çalışacaksın? Plan sayfası 30 dakikalık özel öneriyi hazırlar.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">6</div>
+        <h3>Yanlış defteri</h3>
+        <p>Yanlış yaptığın soruları biriktirir, doğru zamanda tekrar önerir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Neden farklı?</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">✓</div>
+        <h3>Reklam yok, dikkat dağıtan yok</h3>
+        <p>Premium uygulama, premium hissiyat. Push spam yok, baskı yok.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">✓</div>
+        <h3>Türkçe ve LGS odaklı</h3>
+        <p>Çevrilmiş bir dil değil. MEB müfredatına göre çözüm.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">✓</div>
+        <h3>Veli için haftalık özet</h3>
+        <p>Pazar akşamı, çocuğunuzun haftası — kısa, dürüst, sakin bir e-posta.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <a href="privacy.html">Gizlilik Politikası</a> ·
+  <a href="terms.html">Kullanım Şartları</a> ·
+  <a href="delete-account.html">Hesabımı Sil</a> ·
+  <a href="mailto:destek@lgskocu.com">İletişim</a>
+  <div class="copyright">© 2026 LGS Koçu</div>
+</footer>
+
+</body>
+</html>
